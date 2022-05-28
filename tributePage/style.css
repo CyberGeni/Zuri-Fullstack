@@ -1,11 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 * {
-    padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 3px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #757575;
+    border-radius: 8px;
 }
 body {
     font-family: 'Familjen Grotesk', sans-serif;
     color: #333;
     background-color: rgba(203, 213, 224, 0.39);
+    width: 85%;
+    margin: auto;
+}
+figure {
+    display: grid;
+}
+img {
+    border-radius: 50%;
+    padding: 2px;
+    border: 3px dashed rgb(26, 29, 27);
+    margin: 1em auto;
+    object-fit: cover;
+}
+small {
+    font-size: xx-small;
+    text-align: center;
+}
+figcaption {
+    font-weight: 800;
+    font-size: 1.9em;
+}
+blockquote {
+    background: #ccc;
+    padding: 1em 1.2em;
+    margin: 1em;
+}
+h3 {
+    margin-top: 1em;
+}
+ul {
+    margin: 1em 0;
+}
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+        margin: auto;
+        gap: 3rem;
+        height: 100vh;
+        overflow: hidden;
+    }
+    section:first-child {
+        position: sticky;
+        align-self: center;
+    }
+    section:last-child {
+        overflow-y: scroll;
+    }
+    cite a {
+        text-align: center;
+    }
 }
