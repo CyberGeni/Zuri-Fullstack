@@ -4,14 +4,18 @@
 # --> {"cake":2, "big":1, "is":2, "the":1, "a":1, "it":1}
 
 def read_file_content(filename):
-    with open(filename) as story:
-        return story.read()
+    file = open(filename, 'r')
+    story = file.read()
+    return story
 
 def count_words():
-    text = read_file_content("./story.txt")
+    text = read_file_content("readingTextFiles\story.txt")
     words = text.split()
+    unique_words = set(words)
+    dictionary = {}
+    for word in unique_words:
+        dictionary.update({word: words.count(word)})
+    
+    return dictionary
 
-    return words
-
-count = count_words()
-print(count)
+print(count_words())
