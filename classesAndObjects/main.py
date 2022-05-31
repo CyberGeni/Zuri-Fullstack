@@ -8,18 +8,26 @@ class Student:
     
     def change_name(self, name):
         print(name)
+        
     def change_age(self, age):
         print(int(age))
+        
     def add_track(self, *tracks):
         self.tracks.append(tracks)
         print(self.tracks)
+        
     def get_score(self):
         print(self.score)
 
 Bob = Student(name="Bob", age=26, tracks=["FE","BE"], score=20.90)
 
+# user generated names
+newName = input("Enter a new name: ")
+newAge = int(input(" Enter a new age: "))
+newTrack = input("Add track: ")
+
 # Expected methods
-Bob.change_name("Peter")
-Bob.change_age(34)
-Bob.add_track("UI/UX")
+Bob.change_name(newName)
+Bob.change_age(newAge)
+Bob.add_track(newTrack)
 Bob.get_score()
